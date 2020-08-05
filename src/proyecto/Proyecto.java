@@ -1,21 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package proyecto;
 
-/**
- *
- * @author Usuario
- */
+import controlador.CtrlCliente;
+import java.sql.SQLException;
+import modelo.Cliente;
+import modelo.ConsultasCliente;
+import vista.frmCliente;
+
 public class Proyecto {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        System.out.print("HOLA MUNDO");
+    public static void main(String[] args) throws SQLException {
+      
+        
+        Cliente  mod = new Cliente();
+        ConsultasCliente modC =new ConsultasCliente();
+        frmCliente frml = new frmCliente();
+        CtrlCliente ctrl = new  CtrlCliente(mod,modC,frml);
+        ctrl.iniciar();
+        frml.setVisible(true);
+       ctrl.listar();
     }
     
 }
