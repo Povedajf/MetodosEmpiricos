@@ -18,35 +18,11 @@ public class ConsultasCliente extends Conexion{
          ps =con.prepareStatement(sql);
          ps.setString(1,cli.getCedula_cliente());
          ps.setString(2, cli.getNombre_cliente());
-         ps.setString(3, cli.getDireccion_cliente());
-         ps.setString(4,cli.getTelefono_cliente());
+         ps.setString(3,cli.getTelefono_cliente());
+         ps.setString(4, cli.getDireccion_cliente());
+         
          ps.execute();
-        }catch (SQLException e){
-               System.err.println(e+"error desde funcion registrar");
-               return false;
-        }finally{
-            try{
-                con.close();
-            }catch(SQLException e){
-                System.err.println(e);
-            }
-        }
-        return false;
-    } 
-    
-    public boolean  Modificar(Cliente cli) 
-    {
-        PreparedStatement ps=null;
-        Connection con = getConexion();
-        String sql= "UPDATE `proyecto1factura`.`cliente` SET `cedula_cliente` =? ,`nombre_cliente` = ?,`telefono_cliente` =? ,`direccion_cliente` =?  WHERE `cedula_cliente` = ?";
-        try{
-         ps =con.prepareStatement(sql);
-         ps.setString(1,cli.getCedula_cliente());
-         ps.setString(2, cli.getNombre_cliente());
-         ps.setString(3, cli.getDireccion_cliente());
-         ps.setString(4,cli.getTelefono_cliente());
-             
-         ps.execute();
+         return true;
         }catch (SQLException e){
                System.err.println(e);
                return false;
@@ -57,7 +33,34 @@ public class ConsultasCliente extends Conexion{
                 System.err.println(e);
             }
         }
-        return false;
+    } 
+    
+    public boolean  Modificar(Cliente cli) 
+    {
+        PreparedStatement ps=null;
+        Connection con = getConexion();
+        String sql= "UPDATE `proyecto1factura`.`cliente` SET "
+                + "`nombre_cliente` = ?,`telefono_cliente` =? ,`direccion_cliente` =? "
+                + " WHERE `cedula_cliente` = ?";
+        try{
+         ps =con.prepareStatement(sql);
+         ps.setString(1, cli.getNombre_cliente());
+         ps.setString(2,cli.getTelefono_cliente());
+         ps.setString(3, cli.getDireccion_cliente());
+        ps.setString(4,cli.getCedula_cliente());
+
+         ps.execute();
+         return true;
+        }catch (SQLException e){
+               System.err.println(e);
+               return false;
+        }finally{
+            try{
+                con.close();
+            }catch(SQLException e){
+                System.err.println(e);
+            }
+        }
     } 
   
     
@@ -72,6 +75,7 @@ public class ConsultasCliente extends Conexion{
          ps =con.prepareStatement(sql);
          ps.setString(1,cli.getCedula_cliente());
          ps.execute();
+         return true;
         }catch (SQLException e){
                System.err.println(e);
                return false;
@@ -82,7 +86,6 @@ public class ConsultasCliente extends Conexion{
                 System.err.println(e);
             }
         }
-        return false;
     } 
     
     public boolean  Buscar(Cliente cli) 
@@ -120,7 +123,8 @@ public class ConsultasCliente extends Conexion{
     private ResultSet  RS;
     private DefaultTableModel setCedulas(){
              DT= new DefaultTableModel();
-             DT.addColumn("Cedulas");
+             DT.addColumn("Cedula");
+             DT.addColumn("Nombre");
              
         return DT;
     }
@@ -132,9 +136,10 @@ public class ConsultasCliente extends Conexion{
                 setCedulas();
                 ps =con.prepareStatement(SQL_SELECT);
                 rs=ps.executeQuery();
-                Object[] fila= new Object[1];
+                Object[] fila= new Object[2];
                 while(rs.next()){
                 fila[0]=rs.getString(1);
+                fila[1]=rs.getString(2);
                 DT.addRow(fila);
                 }
             }catch(SQLException e){

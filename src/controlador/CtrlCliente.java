@@ -36,23 +36,24 @@ public class CtrlCliente implements ActionListener {
         frml.txtbuscar.setVisible(false);
 
     }
-
+@Override
     public void actionPerformed(ActionEvent e){
         if(e.getSource()==frml.btnGuardar)
         {
-        mod.setCedula_cliente(frml.txtcedula.getText());
-        mod.setNombre_cliente(frml.txtnombres.getText());
-        mod.setDireccion_cliente(frml.txtdireccion.getText());
-        mod.setTelefono_cliente(frml.txttelefono.getText());
-         if(modC.registrar(mod))
-         {
-             JOptionPane.showMessageDialog(null,"Error al guardar ");
-             limpiar();
-         }else{
-         JOptionPane.showMessageDialog(null,"Registro Guardado ");
-          limpiar();
-         }
-         
+            mod.setCedula_cliente(frml.txtcedula.getText());
+            mod.setNombre_cliente(frml.txtnombres.getText());
+            mod.setDireccion_cliente(frml.txtdireccion.getText());
+            mod.setTelefono_cliente(frml.txttelefono.getText());
+             if(modC.registrar(mod))
+                {
+                    JOptionPane.showMessageDialog(null,"Registro Guardado ");
+                    limpiar();
+                    listar();
+                }else{
+                JOptionPane.showMessageDialog(null,"No se pudo registrar ");
+             }
+             
+             
         }
         //modificar
         if(e.getSource()==frml.btnModificar)
@@ -63,10 +64,13 @@ public class CtrlCliente implements ActionListener {
         mod.setTelefono_cliente(frml.txttelefono.getText());
          if(modC.Modificar(mod))
          {
-             JOptionPane.showMessageDialog(null,"Error al Actualizar ");
+             
+             JOptionPane.showMessageDialog(null," Registro actualizado");
+             limpiar();
+             
          }else{
-         JOptionPane.showMessageDialog(null,"Registro Modificado");
-         limpiar();
+         JOptionPane.showMessageDialog(null,"Error al Actualizar");
+
          }
          
         }
@@ -76,11 +80,12 @@ public class CtrlCliente implements ActionListener {
         
          if(modC.Eliminar(mod))
          {
-             JOptionPane.showMessageDialog(null,"Error al Borrar ");
-            
+             JOptionPane.showMessageDialog(null,"Registro Borrado ");
+            limpiar();
+            listar();
          }else{
-         JOptionPane.showMessageDialog(null,"Registro Borrado");
-          limpiar();
+         JOptionPane.showMessageDialog(null,"Error al borrar registro");
+
          }
          
         }
@@ -96,7 +101,7 @@ public class CtrlCliente implements ActionListener {
              frml.txttelefono.setText(mod.getTelefono_cliente());
             
          }else{
-         JOptionPane.showMessageDialog(null,"No encontrado ");
+         JOptionPane.showMessageDialog(null,"No encontrado");
          }
          
         }
@@ -105,9 +110,6 @@ public class CtrlCliente implements ActionListener {
             limpiar();
         }
      
-    
-  
-    
     }
     
     public void limpiar(){
@@ -117,7 +119,7 @@ public class CtrlCliente implements ActionListener {
     frml.txttelefono.setText(null);
     }
     
-      public void listar() {
+    public void listar() {
         frml.tabla.setModel(modC.getCedulas());
     
     }
