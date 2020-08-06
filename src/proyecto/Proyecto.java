@@ -2,10 +2,14 @@
 package proyecto;
 
 import controlador.CtrlCliente;
+import controlador.ctrlInventario;
 import java.sql.SQLException;
 import modelo.Cliente;
 import modelo.ConsultasCliente;
+import modelo.ConsultasInventario;
+import modelo.Inventario;
 import vista.frmCliente;
+import vista.frmInventario;
 
 public class Proyecto {
 
@@ -21,7 +25,16 @@ public class Proyecto {
         CtrlCliente ctrl = new  CtrlCliente(mod,modC,frml);
         ctrl.iniciar();
         frml.setVisible(true);
-       ctrl.listar();
+        ctrl.listar();
+        
+        Inventario modd = new Inventario();
+        ConsultasInventario modCC = new ConsultasInventario();
+        frmInventario frmm = new frmInventario();
+        
+        ctrlInventario Control = new ctrlInventario(modd, modCC, frmm);
+        Control.iniciar();
+        frmm.setVisible(true);
+   
     }
     
 }
