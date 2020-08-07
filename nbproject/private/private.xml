@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Documents/MODPROCESOS/facturacion/MetodosEmpiricos/src/modelo/Cliente.java</file>
-            <file>file:/C:/Users/User/Documents/MODPROCESOS/facturacion/MetodosEmpiricos/src/vista/frmCliente.java</file>
-            <file>file:/C:/Users/User/Documents/MODPROCESOS/facturacion/MetodosEmpiricos/src/modelo/Conexion.java</file>
-            <file>file:/C:/Users/User/Documents/MODPROCESOS/facturacion/MetodosEmpiricos/src/modelo/ConsultasCliente.java</file>
-            <file>file:/C:/Users/User/Documents/MODPROCESOS/facturacion/MetodosEmpiricos/src/proyecto/Proyecto.java</file>
+            <file>file:/D:/Program%20files%20(x86)/GitHub/MetodosEmpiricos/MetodosEmpiricos/src/vista/frmInventario.java</file>
+            <file>file:/D:/Program%20files%20(x86)/GitHub/MetodosEmpiricos/MetodosEmpiricos/src/controlador/CtrlCliente.java</file>
+            <file>file:/D:/Program%20files%20(x86)/GitHub/MetodosEmpiricos/MetodosEmpiricos/src/proyecto/Proyecto.java</file>
+            <file>file:/D:/Program%20files%20(x86)/GitHub/MetodosEmpiricos/MetodosEmpiricos/src/modelo/ConsultasInventario.java</file>
+            <file>file:/D:/Program%20files%20(x86)/GitHub/MetodosEmpiricos/MetodosEmpiricos/src/controlador/ctrlInventario.java</file>
         </group>
     </open-files>
 </project-private>
