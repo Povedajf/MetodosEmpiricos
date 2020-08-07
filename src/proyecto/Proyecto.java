@@ -34,6 +34,7 @@ public class Proyecto {
         ctrlInventario Control = new ctrlInventario(modd, modCC, frmm);
         Control.iniciar();
         frmm.setVisible(true);
+        Control.listar();
    
     }
     

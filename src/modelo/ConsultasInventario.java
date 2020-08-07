@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.table.DefaultTableModel;
 
 public class ConsultasInventario extends Conexion {
 
@@ -11,7 +12,7 @@ public class ConsultasInventario extends Conexion {
         PreparedStatement ps = null;
         Connection con = getConexion();
         String sql = "INSERT INTO inventario(cantidad_inventario, nombre_inventario, descripcion_inventario, costo_inventario, precio_inventario) VALUES(?,?,?,?,?)";
-
+        
         try {
 
             ps = con.prepareStatement(sql);
@@ -124,4 +125,42 @@ public class ConsultasInventario extends Conexion {
             }
         }
     }
+    
+    private final String SQL_SELECT = "SELECT * FROM inventario";
+    private DefaultTableModel DTT;
+    private ResultSet RS;
+    
+    private DefaultTableModel setNombres()
+    {
+        DTT = new DefaultTableModel();
+        DTT.addColumn("ID");
+        DTT.addColumn("Nombre");
+        return DTT;
+    }
+    
+    public DefaultTableModel getRegistros()
+    {
+        PreparedStatement ps = null;
+        Connection con = getConexion();
+        ResultSet rs=null;
+        
+        try{
+            setNombres();
+            ps = con.prepareStatement(SQL_SELECT);
+            rs = ps.executeQuery();
+            Object[] fila = new Object[2];
+            while(rs.next()){
+                fila[0] = rs.getInt(1);
+                fila[1] = rs.getString(3);
+                DTT.addRow(fila);
+            }
+        }catch(SQLException e){
+            System.err.println(e);
+        }finally{
+            ps=null;
+            rs=null;
+        } 
+        return DTT;
+    }
+    
 }

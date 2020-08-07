@@ -47,6 +47,7 @@ public class ctrlInventario implements ActionListener{
             {
                 JOptionPane.showMessageDialog(null, "Registro Guardado");
                 limpiar();
+                listar();
             }else{
                 JOptionPane.showMessageDialog(null, "Error al Guardar");
                 limpiar();
@@ -67,6 +68,7 @@ public class ctrlInventario implements ActionListener{
             {
                 JOptionPane.showMessageDialog(null, "Registro Modificado");
                 limpiar();
+                listar();
             }else{
                 JOptionPane.showMessageDialog(null, "Error al Modificar");
                 limpiar();
@@ -126,4 +128,7 @@ public class ctrlInventario implements ActionListener{
         frmm.txtPrecio.setText(null);
     }
     
+    public void listar() {
+        frmm.tabli.setModel(modCC.getRegistros());
+    }
 }
