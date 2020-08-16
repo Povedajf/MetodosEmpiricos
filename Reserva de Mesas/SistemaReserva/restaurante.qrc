@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imagenes/general.jpg</file>
+        <file>imagenes/logo.jpg</file>
+        <file>imagenes/reservar.png</file>
+        <file>imagenes/fondo.jpg</file>
+        <file>imagenes/fondoreserva.jpg</file>
+    </qresource>
+</RCC>

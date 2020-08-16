@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReservaABCDialog</class>
+ <widget class="QDialog" name="ReservaABCDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1339</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>true</bool>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel{
+font: 75 14pt &quot;Script MT Bold&quot;;
+}</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>250</y>
+     <width>631</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableView { 
+selection-background-color:qlineargradient(spread:reflect, x1:0, y1:0.415, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.960199 rgba(107, 20, 20, 255), stop:1 rgba(255, 255, 255, 255));
+ background:rgb(255, 255, 255);
+	font: 8pt &quot;Stencil&quot;;
+} 
+QTableView QTableCornerButton::section {
+ background: #875367; border: 5px outset red;
+ } QTableView::indicator:unchecked {
+ background-color: #d7d6d5
+ }</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnreservar">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>500</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid whitesmoke;
+ border-radius: 5px;
+ background-color: #CFB8A9;
+ padding: 10px;
+ margin: 10px;
+}
+QPushButton:hover {
+ background-color: #FCE5E5;
+}
+* {
+     font: 57 10pt &quot;Roboto&quot;;
+}
+QPushButton[text='soy btn'] {
+   color: red;
+}</string>
+   </property>
+   <property name="text">
+    <string>Reservar </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>250</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 14pt &quot;Script MT Bold&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Cliente: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>305</y>
+     <width>201</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Numero de personas</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fecha: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>350</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string> año/mes/dia</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>390</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mesa: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>20</y>
+     <width>201</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Vivaldi</family>
+     <pointsize>30</pointsize>
+     <weight>50</weight>
+     <italic>true</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: italic 30pt &quot;Vivaldi&quot;;
+color:#F4E7E7;
+</string>
+   </property>
+   <property name="text">
+    <string>Reserva</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="boxcliente">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>260</y>
+     <width>141</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtnumperres">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>310</y>
+     <width>41</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtcedulaclires1">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>260</y>
+     <width>191</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 12pt &quot;Script MT Bold&quot;;
+color:#F4E7E7;</string>
+   </property>
+   <property name="text">
+    <string>Cedula del Cliente</string>
+   </property>
+  </widget>
+  <widget class="QDateTimeEdit" name="txtfechares">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>350</y>
+     <width>141</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="dateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2000</year>
+     <month>1</month>
+     <day>1</day>
+    </datetime>
+   </property>
+   <property name="displayFormat">
+    <string>yyyy/MM/dd H:mm</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtidmesares">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>390</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 12pt &quot;Script MT Bold&quot;;
+color:#F4E7E7;</string>
+   </property>
+   <property name="text">
+    <string>Numero de Mesa</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="boxmesa">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>390</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1331</width>
+     <height>651</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="restaurante.qrc">:/imagenes/fondoreserva.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>200</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:#F4E7E7;
+font: italic 20pt &quot;Vivaldi&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Lista de Reservas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>180</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:#F4E7E7;
+font: italic 20pt &quot;Vivaldi&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Hacer Reserva:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>260</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cedula del Cliente:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>390</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Numero de Mesa:</string>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>tableView</zorder>
+  <zorder>btnreservar</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+  <zorder>boxcliente</zorder>
+  <zorder>txtnumperres</zorder>
+  <zorder>txtcedulaclires1</zorder>
+  <zorder>txtfechares</zorder>
+  <zorder>txtidmesares</zorder>
+  <zorder>boxmesa</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_9</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_11</zorder>
+ </widget>
+ <resources>
+  <include location="restaurante.qrc"/>
+ </resources>
+ <connections/>
+</ui>
