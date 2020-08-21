@@ -81,8 +81,30 @@ QPushButton[text='soy btn'] {
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>370</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roman</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Agregar Cliente</string>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -90,7 +112,7 @@ QPushButton[text='soy btn'] {
      <x>0</x>
      <y>0</y>
      <width>757</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuhbgvfcrde">
@@ -103,6 +125,7 @@ QPushButton[text='soy btn'] {
     <property name="title">
      <string>Cliente</string>
     </property>
+    <addaction name="actionClienteABC"/>
    </widget>
    <widget class="QMenu" name="menumenu">
     <property name="title">
@@ -134,6 +157,11 @@ QPushButton[text='soy btn'] {
   <action name="actionReservaABC">
    <property name="text">
     <string>Alta,aja,consulta,modificacion</string>
+   </property>
+  </action>
+  <action name="actionClienteABC">
+   <property name="text">
+    <string>Alta, Baja, Conculta, Modificación</string>
    </property>
   </action>
  </widget>

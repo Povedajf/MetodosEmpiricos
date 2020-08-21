@@ -20,6 +20,10 @@ private slots:
 
         void on_pushButton_clicked();
 
+        void on_actionClienteABC_triggered();
+
+        void on_pushButton_2_clicked();
+
 private:
         Ui::MainWindow *ui;
         DuBaseDatos mBaseDatos;

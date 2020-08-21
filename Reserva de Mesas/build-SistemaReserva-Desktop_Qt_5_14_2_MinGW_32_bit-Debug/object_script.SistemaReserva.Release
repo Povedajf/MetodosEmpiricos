@@ -1,0 +1,11 @@
+release/clienteabcdialog.o
+release/dubasedatos.o
+release/main.o
+release/mainwindow.o
+release/menuabcdialog.o
+release/reservaabcdialog.o
+release/qrc_restaurante.o
+release/moc_clienteabcdialog.o
+release/moc_mainwindow.o
+release/moc_menuabcdialog.o
+release/moc_reservaabcdialog.o

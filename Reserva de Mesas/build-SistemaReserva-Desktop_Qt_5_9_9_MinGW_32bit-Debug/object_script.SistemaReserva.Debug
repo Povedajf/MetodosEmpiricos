@@ -1,0 +1,11 @@
+debug/clienteabcdialog.o
+debug/dubasedatos.o
+debug/main.o
+debug/mainwindow.o
+debug/menuabcdialog.o
+debug/reservaabcdialog.o
+debug/qrc_restaurante.o
+debug/moc_clienteabcdialog.o
+debug/moc_mainwindow.o
+debug/moc_menuabcdialog.o
+debug/moc_reservaabcdialog.o
