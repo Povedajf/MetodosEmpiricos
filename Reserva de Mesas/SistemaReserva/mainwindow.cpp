@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "reservaabcdialog.h"
+#include "clienteabcdialog.h"
 #include "QMessageBox"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -44,7 +45,18 @@ void MainWindow::on_pushButton_clicked()
     d.exec();
 }
 
-void MainWindow::on_btnMesa_clicked()
-{
 
+void MainWindow::on_btnMesa_clicked()
+{}
+
+void MainWindow::on_actionClienteABC_triggered()
+{
+    ClienteABCDialog d(this);
+    d.exec();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ClienteABCDialog d(this);
+    d.exec();
 }

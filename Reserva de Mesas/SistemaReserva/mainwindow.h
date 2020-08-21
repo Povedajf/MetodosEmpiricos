@@ -4,7 +4,7 @@
 #include <dubasedatos.h>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui { class MainWindow;}
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
@@ -20,7 +20,12 @@ private slots:
 
         void on_pushButton_clicked();
 
+
         void on_btnMesa_clicked();
+
+        void on_actionClienteABC_triggered();
+
+        void on_pushButton_2_clicked();
 
 private:
         Ui::MainWindow *ui;
