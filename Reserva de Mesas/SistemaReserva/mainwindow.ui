@@ -81,8 +81,54 @@ QPushButton[text='soy btn'] {
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="btnMesa">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>350</y>
+      <width>201</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+ border: 2px solid whitesmoke;
+ border-radius: 5px;
+ background-color: #CFB8A9;
+ padding: 10px;
+ margin: 10px;
+}
+QPushButton:hover {
+ background-color: #A92727;
+}
+* {
+     font: 57 10pt &quot;Roboto&quot;;
+}
+QPushButton[text='soy btn'] {
+   color: red;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/imagenes/reservar.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>130</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>pushButton</zorder>
+   <zorder>btnMesa</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

@@ -20,11 +20,14 @@ public:
 
 private slots:
     void on_btnreservar_clicked();
-
     void on_boxcliente_currentIndexChanged(const QString &arg1);
-
     void on_boxmesa_currentIndexChanged(const QString &arg1);
     void tabla();
+    void on_boxmenudetalle_currentIndexChanged(const QString &arg1);
+
+    void on_btndetalle_clicked();
+
+    void on_btnverdetalle_clicked();
 
 private:
     Ui::ReservaABCDialog *ui;

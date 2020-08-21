@@ -43,3 +43,8 @@ void MainWindow::on_pushButton_clicked()
     ReservaABCDialog d(this);
     d.exec();
 }
+
+void MainWindow::on_btnMesa_clicked()
+{
+
+}

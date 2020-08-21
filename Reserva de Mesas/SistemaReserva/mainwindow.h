@@ -20,6 +20,8 @@ private slots:
 
         void on_pushButton_clicked();
 
+        void on_btnMesa_clicked();
+
 private:
         Ui::MainWindow *ui;
         DuBaseDatos mBaseDatos;
